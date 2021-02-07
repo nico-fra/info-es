@@ -26,7 +26,7 @@ public class Es150 {
         } while (n < 1 || n > 12);
         
         if (n == 1 || n == 2)
-            System.out.println(1);
+            System.out.println("1");
         else {
             while (count < n) {
                 c = b + a;
