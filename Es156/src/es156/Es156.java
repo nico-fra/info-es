@@ -15,6 +15,10 @@ public class Es156 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        // System.out.println(LeggiNumeroFloat();
+    }
+    
+    public static float LeggiNumeroFloat() {
         Scanner in = new Scanner (System.in);
         float n = 0;
         
@@ -23,10 +27,6 @@ public class Es156 {
             n = in.nextFloat();
         }
         
-        System.out.println(LeggiNumeroFloat(n));
-    }
-    
-    public static float LeggiNumeroFloat(float n) {
         return n;
     }
     
