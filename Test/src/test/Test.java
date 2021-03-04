@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package test;
-
+import java.util.Arrays;
+import java.util.Scanner;
 /**
  *
  * @author nick
@@ -15,8 +16,21 @@ public class Test {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        char a = 'a';
-        System.out.println((int) a);
+        Scanner in = new Scanner (System.in);
+        int n, m;
+        
+        n = in.nextInt();
+        
+        for (int i=2; i*i <= n; i++) {
+            if (n%i==0)
+                System.out.println(i + " ");
+            while (n%i==0)
+                n /= i;
+        }
+        if (n>1)
+            System.out.println(n);
+        else
+            System.out.println();
     }
     
 }

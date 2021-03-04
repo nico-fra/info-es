@@ -16,7 +16,7 @@ public class Fibo {
      */
     public static void main(String[] args) {
         Scanner in = new Scanner (System.in);
-        int a = 0, b = 1, c = 0, n;
+        int n, a = 0, b = 1, c;
         n = in.nextInt();
         
         for (int i=0; i<n; i++) {

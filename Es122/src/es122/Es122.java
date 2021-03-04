@@ -43,7 +43,7 @@ public class Es122 {
         for (int i=0; i<ranges.length; i++) {
             str = (i == 0) ? "tra 2 e 4: " + ranges[i] :
                   (i == 1) ? "pari a 5: " + ranges[i] :
-                  "tra 6 e 8" + ranges[i];
+                  "tra 6 e 8: " + ranges[i];
             System.out.println("Numero di punteggi " + str);
         }
     }
