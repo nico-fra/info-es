@@ -14,10 +14,9 @@ public class Es177 {
     public static int conteggio;
     
     public static void Conta(int[] arr, int x) {
-        for (int i : arr) {
+        for (int i : arr)
             if (i == x)
                 conteggio +=1;
-        }
     }
 
     public static void main(String[] args) {
@@ -31,9 +30,8 @@ public class Es177 {
         
         int array[] = new int[n], num = (int) ((Math.random() * (20-1))+1);
         
-        for (int i=0; i<array.length; i++) {
+        for (int i=0; i<array.length; i++)
             array[i] = (int) ((Math.random() * (20-1))+1);
-        }
         
         Conta(array, num);
         
