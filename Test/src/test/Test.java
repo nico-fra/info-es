@@ -4,33 +4,49 @@
  * and open the template in the editor.
  */
 package test;
-import java.util.Arrays;
-import java.util.Scanner;
+import javax.swing.*;
 /**
  *
  * @author nick
  */
-public class Test {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Scanner in = new Scanner (System.in);
-        int n, m;
-        
-        n = in.nextInt();
-        
-        for (int i=2; i*i <= n; i++) {
-            if (n%i==0)
-                System.out.println(i + " ");
-            while (n%i==0)
-                n /= i;
+// esercizio 1
+
+public class Test {
+    public static String AggiungiParole(String s, int n) {
+        String temp = "";
+        n = Math.abs(n);
+        for (int i=0; i<n; i++) temp += s;
+        return temp;
+    }
+    public static String ModificaStringa(String r, int n) {
+        String temp = "";
+        if (n >= 0) {
+            for (int i=0; i<r.length(); i++) {
+                char ch = r.charAt(i);
+                if (ch >= 'a' && ch <= 'z') temp += (char)((int) ch - 32);
+                else temp += r.charAt(i);
+            }
+        } else {
+            for (int i=0; i<r.length(); i++) {
+                char ch = r.charAt(i);
+                if (ch >= 'A' && ch <= 'Z') temp += (char)((int) ch + 32);
+                else temp += r.charAt(i);
+            }
         }
-        if (n>1)
-            System.out.println(n);
-        else
-            System.out.println();
+        return temp;
+    }
+    public static void main(String[] args) {
+        String s = JOptionPane.showInputDialog("Inserire una stringa"), r = "", rm = "";
+        int n;
+        try {
+            n = Integer.valueOf(JOptionPane.showInputDialog("Inserire un numero"));
+        } catch (NumberFormatException e) {
+            n = 0;
+        }
+        r = AggiungiParole(s, n);
+        rm = ModificaStringa(r, n);
+        JOptionPane.showMessageDialog(null, rm);
     }
     
 }
